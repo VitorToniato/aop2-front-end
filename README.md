@@ -12,9 +12,9 @@ Este projeto tem como objetivo desenvolver um **blog sobre livros**, apresentand
 ## 🧩 Estrutura do site
 O site é composto por **cinco páginas**:
 - 🏠 Home – Apresentação do blog e destaques dos conteúdos
-- 📖 Livros Clássicos
-- ✨ Livros Modernos
-- 📚 Autores
+- 👩🏻‍🤝‍👨🏽 Livros de Romance
+- 🕵️ Livros de Suspense
+- 🇧🇷 Livros Nacionais
 - 📞 Contatos
 
 Cada página contém o mesmo menu de navegação (`<nav>`) para facilitar o acesso às seções.
@@ -30,7 +30,7 @@ Cada página contém o mesmo menu de navegação (`<nav>`) para facilitar o aces
 🔗 **Site online:** [https://vitortoniato.github.io/aop2-front-end/](https://vitortoniato.github.io/aop2-front-end/)
 
 ## 🏫 Informações acadêmicas
-Trabalho desenvolvido para a disciplina de **Desenvolvimento Web (AOP2)**  
-Professor(a): [Nome do(a) professor(a)]  
-Instituição: UVV
+Trabalho desenvolvido para a disciplina de **Programação Web - Front End**  
+Professor(a): Fabricio Ribeiro Ferreira
+Instituição: Universidade de Vila Velha - UVV
 Ano: 2025
