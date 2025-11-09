@@ -1,9 +1,9 @@
 # 📚 Blog sobre Livros
 
 ## 👥 Integrantes
-- Daniel [Sobrenome]
-- Lucas [Sobrenome]
-- Pedro [Sobrenome]
+- Daniel Damasceno
+- Lucas Barroca
+- Pedro Romanelo
 - Vitor Toniato
 
 ## 🎯 Objetivo
@@ -32,5 +32,5 @@ Cada página contém o mesmo menu de navegação (`<nav>`) para facilitar o aces
 ## 🏫 Informações acadêmicas
 Trabalho desenvolvido para a disciplina de **Desenvolvimento Web (AOP2)**  
 Professor(a): [Nome do(a) professor(a)]  
-Instituição: [Nome da instituição]  
+Instituição: UVV
 Ano: 2025
