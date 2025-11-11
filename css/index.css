@@ -1,4 +1,7 @@
 body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #D9CDBD;
@@ -16,6 +19,8 @@ header {
     font-size: 25px;
     margin: 0px;
 }
+
+
 
 .menu-container {
     display: flex;
@@ -47,11 +52,21 @@ header {
     background-color: #DBC9BB;
     top: 0px;
     left: -100%;
-    width: 50%;
+    width: 30%;
     height: 100%;
     transition: left 0.4s ease;
     z-index: 1000;
 }
+
+  .menu-links {
+    width: 60%;
+  }
+
+
+  .menu-links {
+    width: 80%;
+  }
+
 
 .menu-links a:not(.capa) {
     display: flex;
@@ -84,8 +99,6 @@ header {
         border: none;
         cursor: pointer;
         transform: translate(-50%, -50%);
-        
-
 }
 
 .close-btn {
@@ -98,7 +111,6 @@ header {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-
 
 }
 
@@ -113,14 +125,51 @@ header {
 
 
 .home {
- width: 80%;
- margin: 50px auto;
- padding: 30px;
- background-color:#DBC9BB;
- text-align: center;
+    flex: 1;
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:#DBC9BB;
+    text-align: center;
+
 }
 
-.Main-menu {
-color: black;
 
+.Main-menu {
+    color: black;
+}
+
+/* Elemento Footer */
+
+
+.footer-content {
+    background-color: #A5A5A5;
+    color: #fff;
+    text-align: center;
+    padding: 25px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    font-size: 16px;
+}
+
+.footer-content a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom{
+    border-top: 1px solid #444;
+    margin-top: 15px;
+    padding-top: 10px;
+    font-size: 12px;
+    color: blueviolet;
+    text-align: center;
 }
