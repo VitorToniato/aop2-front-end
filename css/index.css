@@ -1,39 +1,43 @@
 body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
+    /* Faz o footer ficar no final da tela */
+    min-height: 100vh;              /* altura mínima da tela */
+    display: flex;                  /* ativa o flexbox */
+    flex-direction: column;         /* organiza os elementos em coluna (header, main, footer) */
+    margin: 0;                      /* remove margens padrão */
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #D9CDBD;
+    background-color: #D9CDBD;      /* cor de fundo geral */
 }
 
+/* ==================== CABEÇALHO ==================== */
 header {
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 20px;                  /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra abaixo do header */
 }
 
+/* Título principal no topo */
 .title {
-    position: absolute;
+    position: absolute;                  /* Centralizado de forma fixa */
     left: 50%;
     transform: translateX(-50%);
     font-size: 25px;
-    margin: 0px;
+    margin: 0;
 }
 
-
-
+/* Container que segura o menu e o título */
 .menu-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Ícone do menu (3 risquinhos) */
 .menu-botao {
     display: block;
     align-items: center;
     cursor: pointer;
-} 
+}
 
+/* Estilo dos risquinhos do menu */
 .menu-botao span {
     display: block;
     width: 25px;
@@ -43,64 +47,67 @@ header {
     transition: 0.3s;
 }
 
+/* ==================== MENU LATERAL ==================== */
 .menu-links {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: fixed;                     /* Fixa sobre a tela */
     justify-content: center;
     align-items: center;
     background-color: #DBC9BB;
-    top: 0px;
-    left: -100%;
+    top: 0;
+    left: -100%;                         /* Começa fora da tela */
     width: 30%;
     height: 100%;
-    transition: left 0.4s ease;
+    transition: left 0.4s ease;          /* Animação suave de entrada */
     z-index: 1000;
 }
 
-  .menu-links {
-    width: 60%;
-  }
+/* Responsividade: ajusta largura em telas menores */
+@media (max-width: 768px) {
+    .menu-links {
+        width: 60%;
+    }
+}
 
+@media (max-width: 480px) {
+    .menu-links {
+        width: 80%;
+    }
+}
 
-  .menu-links {
-    width: 80%;
-  }
-
-
+/* Links dentro do menu */
 .menu-links a:not(.capa) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
     color: #333;
     font-weight: bold;
     margin: 10px 0;
-    font-weight: bold;
     font-size: 20px;
     padding: 10px 25px;
     border: 2px solid black;
-    transition: transform 0.2s, backgroud-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
     text-align: center;
     width: 200px;
     display: block;
-    border-radius: 5px
-}  
-
-.capa {
-        position: absolute;
-        font-size: 30px;
-        font-weight: bold;
-        color: #000;
-        text-decoration: none;
-        top: 20%;
-        left: 30%;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        transform: translate(-50%, -50%);
+    border-radius: 5px;
 }
 
+/* Link "Bora Ler?" da capa */
+.capa {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    top: 20%;
+    left: 30%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+/* Botão para fechar o menu lateral */
 .close-btn {
     display: flex;
     position: absolute;
@@ -111,37 +118,30 @@ header {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-
 }
 
+/* Quando o menu é ativado (classe adicionada via JS) */
 .menu-ativo {
-    left: 0;
+    left: 0; /* Mostra o menu */
 }
 
+/* Efeito hover nos links do menu */
 .menu-links a:not(.capa):hover {
     transform: translateY(-4px);
     background-color: #E5E3D6;
 }
 
-
+/* ==================== CONTEÚDO PRINCIPAL ==================== */
 .home {
     flex: 1;
     width: 90%;
     margin: 50px auto;
     padding: 20px;
-    background-color:#DBC9BB;
+    background-color: #DBC9BB;
     text-align: center;
-
 }
 
-
-.Main-menu {
-    color: black;
-}
-
-/* Elemento Footer */
-
-
+/* ==================== RODAPÉ ==================== */
 .footer-content {
     background-color: #A5A5A5;
     color: #fff;
@@ -151,10 +151,12 @@ header {
     margin-top: 40px;
 }
 
+/* Texto dentro do footer */
 .footer-content p {
     font-size: 16px;
 }
 
+/* Link dentro do footer */
 .footer-content a {
     color: black;
     text-decoration: none;
@@ -165,7 +167,8 @@ header {
     text-decoration: underline;
 }
 
-.footer-bottom{
+/* Parte inferior do footer (linha e direitos autorais) */
+.footer-bottom {
     border-top: 1px solid #444;
     margin-top: 15px;
     padding-top: 10px;
