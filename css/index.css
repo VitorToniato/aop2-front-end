@@ -151,7 +151,6 @@ header {
     margin-top: 40px;
 }
 
-/* Texto dentro do footer */
 .footer-content p {
     font-size: 16px;
 }
@@ -167,7 +166,7 @@ header {
     text-decoration: underline;
 }
 
-/* Parte inferior do footer (linha e direitos autorais) */
+/* Parte inferior do footer */
 .footer-bottom {
     border-top: 1px solid #444;
     margin-top: 15px;
@@ -175,4 +174,52 @@ header {
     font-size: 12px;
     color: blueviolet;
     text-align: center;
+}
+
+/* Estilo Formulário */
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.contato-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #444;
+  outline: none;
+}
+
+.contato-form button {
+    background-color: #333;;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: backgroud-color 0.3s;
+}
+
+
+.contato-form button:houver {
+    background-color: #555;
 }
