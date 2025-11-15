@@ -1,73 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
-    <title>Bora Ler? - Romance</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script defer src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Gênero Romance</title>
+    
+    <style>
+        /* CSS Básico (Inspirado no index.css) */
+        * {
+            box-sizing: border-box; /* Garante que padding não afete a largura final */
+        }
 
+        body {
+            margin: 0; /* remove margens padrão */
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #D9CDBD; /* cor de fundo geral (do seu CSS) */
+            padding: 20px; /* Espaçamento para o conteúdo não colar nas bordas */
+            color: #333;
+        }
+
+        /* Contêiner Principal (Baseado no .home) */
+        .content-container {
+            width: 90%;
+            max-width: 900px; /* Limita a largura para melhor leitura */
+            margin: 20px auto; /* Centraliza (baseado no .home) */
+            padding: 30px;
+            background-color: #DBC9BB; /* Cor do .home */
+            border-radius: 8px; /* Borda suave */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra (do seu header) */
+        }
+
+        /* Títulos */
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #A5A5A5;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #CCC;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #000;
+        }
+
+        /* Parágrafos e Listas */
+        p, li {
+            line-height: 1.6; /* Melhora a legibilidade */
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-position: inside; /* Mantém os marcadores dentro do bloco */
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Cartão de Indicação de Livro */
+        .book-card {
+            background-color: #FFFFFF; /* Fundo branco para destacar */
+            border: 1px solid #C5BBAF;
+            border-radius: 5px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            display: flex; /* Usar flexbox para alinhar imagem e texto */
+            gap: 20px; /* Espaço entre a imagem e o texto */
+            align-items: flex-start; /* Alinha o conteúdo ao topo */
+        }
+
+        /* Estilo para a imagem do livro */
+        .book-card img {
+            max-width: 120px; /* Largura máxima da imagem */
+            height: auto; /* Mantém a proporção */
+            border-radius: 4px; /* Bordas suaves para a imagem */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex-shrink: 0; /* Impede que a imagem encolha */
+        }
+
+        /* Destaca os detalhes (Autor, Páginas) */
+        .book-card strong {
+            color: #111;
+            display: inline-block;
+            min-width: 150px; /* Alinha os detalhes */
+        }
+
+        /* Conteúdo do texto dentro do card */
+        .book-details {
+            flex-grow: 1; /* Permite que os detalhes do livro ocupem o espaço restante */
+        }
+
+        @media (max-width: 600px) {
+            .book-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .book-card img {
+                margin-bottom: 15px;
+            }
+
+            .book-card strong {
+                min-width: unset;
+                display: block; /* quebra linha */
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <!-- Fundo escuro ao abrir o menu lateral -->
-        <div id="overlay" class="hidden"></div>
 
-        <div class="menu-container">
-            <!-- Ícone do menu hambúrguer -->
-            <div class="menu-botao" id="botaoMenu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <main class="content-container">
+        <h1>O que é o romance?</h1>
+        <p>
+            O romance é um gênero literário de ficção caracterizado por ser uma narrativa
+            longa em prosa, focada no desenvolvimento de personagens complexos e um
+            enredo com sequência de eventos. Diferente do que o nome pode sugerir, não
+            se limita a histórias de amor, podendo ser histórico, psicológico, regional,
+            policial, entre outros.
+        </p>
+
+        <h2>O que caracteriza um romance?</h2>
+        <ul>
+            <li>narrativa longa;</li>
+            <li>narrativa composta por: narrador, enredo, temporalidade, ambientação e personagens;</li>
+            <li>história em torno de uma trama;</li>
+            <li>linguagem de acordo com a proposta do ambiente narrado;</li>
+            <li>história fictícia ou mesclando ficção e realidade.</li>
+        </ul>
+        <p>
+            Os tipos de romance variam por temas e estilos, e incluem o romance romântico,
+            histórico, realista, naturalista, policial, de aventura, de ficção científica e de
+            fantasia.
+        </p>
+
+        <h2>Vejam abaixo algumas de nossas indicações literárias nesse gênero:</h2>
+
+        <div class="book-card">
+            <img src="../assets/romance/romance_vergonha.jpg" alt="Capa do livro Vergonha">
+            <div class="book-details">
+                <h3>Vergonha - Romance Romântico</h3>
+                <p>
+                    Grace Harris, traída e abandonada pelo marido em Atlanta, decide passar o
+                    verão em Chester, sua cidade natal, para se recuperar emocionalmente e
+                    buscar gentileza. Lá, ela encontra inesperadamente Jackson Emery, o "bad
+                    boy" local, marcado por um passado doloroso e uma reputação de encrenca.
+                    Apesar de serem opostos, a tristeza compartilhada os atrai, levando a um
+                    romance passageiro que eles sabem ser temporário. No entanto, Grace
+                    descobre que esse relacionamento pode causar dores profundas, forçando-a
+                    a fazer escolhas difíceis. O livro "Vergonha", de Brittainy Cherry, vai além de um romance,
+                    oferecendo lições sobre crescimento pessoal, autoconhecimento e amor-próprio.
+                </p>
+                <p><strong>Número de páginas:</strong> 420 páginas</p>
+                <p><strong>Autor(a):</strong> Brittainy Cherry</p>
+                <p><strong>Ano de publicação:</strong> 8 de agosto de 2022</p>
+                <p><strong>Classificação Indicativa:</strong> 18 anos</p>
             </div>
-
-            <!-- Título centralizado -->
-            <h1 class="title">Bora Ler?</h1>
-
-            <!-- Menu lateral de navegação -->
-            <nav class="menu-links" id="menuLinks">
-
-                <!-- Botão de fechar o menu -->
-                <button id="closeMenu" class="close-btn">✖</button>
-
-                <!-- Links do menu -->
-                <a href="index.html" class="capa">Bora Ler?</a>
-                <a href="romance.html">Romance</a>
-                <a href="suspence.html">Suspense</a>
-                <a href="nacionais.html">Nacionais</a>
-                <a href="contato.html">Contato</a>
-            </nav>
         </div>
-    </header>
 
-     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-
-    <main class="home">
-        <div>
-            <h1>Livros de Romance</h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eum laudantium optio corporis aliquam animi veniam a vitae repellat, voluptatem nam quia dolorem earum placeat illum quibusdam! Esse, delectus debitis?
-            </p>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta totam minima incidunt a! Hic est quasi optio, magnam modi odit repudiandae commodi error similique inventore sunt facilis fuga, architecto quo!
-            </p>
+        <div class="book-card">
+            <img src="../assets/romance/romance_quarta.jpg" alt="Capa do livro Quarta Asa">
+            <div class="book-details">
+                <h3>Quarta Asa - Romance de Fantasia</h3>
+                <p>
+                    Violet Sorrengail, destinada a uma vida acadêmica, é forçada pela mãe, general
+                    comandante, a ingressar no Instituto Militar Basgiath para treinar como cavaleira
+                    de dragões. Sendo pequena e frágil, ela enfrenta morte iminente, pois dragões
+                    queimam humanos fracos e cadetes matariam para aumentar chances ou por
+                    ser filha de quem é. Xaden Riorson, líder implacável, exemplifica a ameaça.
+                    Violet usa inteligência para sobreviver entre aliados, inimigos e romances,
+                    enquanto suspeita de segredos ocultos da liderança em meio a uma guerra
+                    crescente.
+                </p>
+                <p><strong>Número de páginas:</strong> 544 páginas</p>
+                <p><strong>Autor(a):</strong> Rebecca Yarros</p>
+                <p><strong>Ano de publicação:</strong> 18 de março de 2024</p>
+                <p><strong>Classificação Indicativa:</strong> 16 anos</p>
+            </div>
         </div>
+
+        <div class="book-card">
+            <img src="../assets/romance/romance_osMiseraveis.jpeg" alt="Capa do livro Os Miseráveis">
+            <div class="book-details">
+                <h3>Os Miseráveis - Romance Histórico</h3>
+                <p>
+                    "Os Miseráveis" é um romance de Victor Hugo que narra a história de Jean
+                    Valjean, um ex-prisioneiro que, após ser perdoado por um bispo, tenta
+                    recomeçar sua vida e se redimir. No entanto, ele é perseguido
+                    implacavelmente pelo inspetor Javert, que representa a lei inflexível. A
+                    trama se passa na França do século XIX, abordando temas como injustiça,
+                    redenção e a miséria causada pelas desigualdades sociais, mostrando a
+                    luta de Valjean para proteger Cosette, filha de Fantine, e lutar contra seu
+                    passado sombrio.
+                </p>
+                <p><strong>Número de páginas:</strong> 1511 páginas</p>
+                <p><strong>Autor(a):</strong> Victor Hugo</p>
+                <p><strong>Ano de publicação:</strong> 1862</p>
+                <p><strong>Classificação Indicativa:</strong> 16 anos</p>
+            </div>
+        </div>
+
     </main>
 
-    <!-- ==================== RODAPÉ ==================== -->
-
-    <footer>
-        <div class="footer-content">
-            <p>
-                Gostou do nosso conteúdo? 
-                <a href="contato.html">Entre em contato</a> 
-                e compartilha sua paixão por livros!
-            </p>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Bora Ler? | Desenvolvidos por Alunos da Universidade de Vila Velha - UVV</p>
-        </div>
-    </footer>
 </body>
 </html>
