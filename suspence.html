@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width='device-width', initial-scale=1.0">
@@ -7,7 +8,139 @@
     <link rel="stylesheet" href="css/index.css">
     <script defer src="js/script.js"></script>
 
+    <style>
+        /* CSS Básico (Inspirado no index.css) */
+        * {
+            box-sizing: border-box;
+            /* Garante que padding não afete a largura final */
+        }
+
+        body {
+            margin: 0;
+            /* remove margens padrão */
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #D9CDBD;
+            /* cor de fundo geral (do seu CSS) */
+            padding: 20px;
+            /* Espaçamento para o conteúdo não colar nas bordas */
+            color: #333;
+        }
+
+        /* Contêiner Principal (Baseado no .home) */
+        .content-container {
+            width: 90%;
+            max-width: 900px;
+            /* Limita a largura para melhor leitura */
+            margin: 20px auto;
+            /* Centraliza (baseado no .home) */
+            padding: 30px;
+            background-color: #DBC9BB;
+            /* Cor do .home */
+            border-radius: 8px;
+            /* Borda suave */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Sombra (do seu header) */
+        }
+
+        /* Títulos */
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #A5A5A5;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #CCC;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #000;
+        }
+
+        /* Parágrafos e Listas */
+        p,
+        li {
+            line-height: 1.6;
+            /* Melhora a legibilidade */
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-position: inside;
+            /* Mantém os marcadores dentro do bloco */
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Cartão de Indicação de Livro */
+        .book-card {
+            background-color: #FFFFFF;
+            /* Fundo branco para destacar */
+            border: 1px solid #C5BBAF;
+            border-radius: 5px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            /* Usar flexbox para alinhar imagem e texto */
+            gap: 20px;
+            /* Espaço entre a imagem e o texto */
+            align-items: flex-start;
+            /* Alinha o conteúdo ao topo */
+        }
+
+        /* Estilo para a imagem do livro */
+        .book-card img {
+            max-width: 120px;
+            /* Largura máxima da imagem */
+            height: auto;
+            /* Mantém a proporção */
+            border-radius: 4px;
+            /* Bordas suaves para a imagem */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+            /* Impede que a imagem encolha */
+        }
+
+        /* Destaca os detalhes (Autor, Páginas) */
+        .book-card strong {
+            color: #111;
+            display: inline-block;
+            min-width: 150px;
+            /* Alinha os detalhes */
+        }
+
+        /* Conteúdo do texto dentro do card */
+        .book-details {
+            flex-grow: 1;
+            /* Permite que os detalhes do livro ocupem o espaço restante */
+        }
+
+        @media (max-width: 600px) {
+            .book-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .book-card img {
+                margin-bottom: 15px;
+            }
+
+            .book-card strong {
+                min-width: unset;
+                display: block;
+                /* quebra linha */
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <!-- Fundo escuro ao abrir o menu lateral -->
@@ -39,35 +172,124 @@
             </nav>
         </div>
     </header>
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main class="content-container">
+        <h1>O que é suspense?</h1>
+        <p>
+            Livros de suspense são obras que criam uma atmosfera de tensão e expectativa no leitor
+            através de tramas cheias de mistério, reviravoltas e acontecimentos inesperados. O objetivo é
+            manter o leitor ansioso, engajado e curioso para descobrir o desfecho da história. Esse gênero,
+            frequentemente associado ao mistério ou ao thriller, foca no impacto emocional da narrativa
+            para o público.
 
-     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+        </p>
 
-    <main class="home">
-        <div>
-            <h1>Livros de Suspense</h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eum laudantium optio corporis aliquam animi veniam a vitae repellat, voluptatem nam quia dolorem earum placeat illum quibusdam! Esse, delectus debitis?
-            </p>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta totam minima incidunt a! Hic est quasi optio, magnam modi odit repudiandae commodi error similique inventore sunt facilis fuga, architecto quo!
-            </p>
+        <h2>O que caracteriza um suspense?</h2>
+        <ul>
+            <li>Tensão e expectativa;</li>
+            <li>Mistério;</li>
+            <li>Reviravoltas;</li>
+            <li>Engajamento;</li>
+            <li>Foco emocional.</li>
+        </ul>
+        <h2>Relação com outros gêneros</h2>
+
+        <ul>
+            <li>Mistério: Os livros de suspense são frequentemente agrupados com o gênero
+                mistério, especialmente quando o foco é desvendar um crime</li>
+            <li>Thriller: O suspense é um componente chave do thriller, que é um gênero
+                focado em adrenalina, ação e perigo iminente, muitas vezes com riscos altos
+                para os personagens</li>
+        </ul>
+        <h2>Subgêneros</h2>
+        <p>O suspense abrange diversos subgêneros, como:
+
+        </p>
+        <ul>
+            <li>Suspense psicológico;</li>
+            <li>Suspense policial;</li>
+            <li>Suspense sobrenatural</li>
+            <li>Suspense de espionagem</li>
+        </ul>
+
+        <h2>Vejam abaixo algumas de nossas indicações literárias nesse gênero:</h2>
+
+
+        <div class="book-card">
+            <img src="assets/suspense/Verity_CAPA.jpg" alt="Capa do livro Verity">
+            <div class="book-details">
+                <h3>Verity - Suspense Psicológico</h3>
+                <p>
+                    Lowen, uma escritora em dificuldade, é contratada para continuar a série
+                    de Verity Crawford, que ficou incapacitada após um acidente. Na casa da
+                    família, ela encontra uma autobiografia secreta onde Verity revela
+                    confissões chocantes sobre sua vida, seu marido e as tragédias com as
+                    filhas. Envolvida por segredos e atraída por Jeremy, Lowen precisa decidir
+                    se expõe a verdade ou mantém tudo em segredo. Verity é um suspense
+                    psicológico cheio de tensão e reviravoltas.
+
+                </p>
+                <p><strong>Número de páginas:</strong> 320 páginas</p>
+                <p><strong>Autor(a):</strong> Collen Hoover</p>
+                <p><strong>Ano de publicação:</strong> 9 de março de 2020</p>
+                <p><strong>Classificação Indicativa:</strong> 18 anos</p>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/suspense/APacienteSilenciosa_CAPA.jpg" alt="Capa do livro A Paciencia Silenciosa">
+            <div class="book-details">
+                <h3>A Paciente Silenciosa - Suspense Policial</h3>
+                <p>
+                    Alicia Berenson, uma artista renomada, atira cinco vezes no rosto do
+                    marido e, desde então, nunca mais fala uma palavra. Internada em um
+                    hospital psiquiátrico, ela se torna um enigma que fascina o público. Theo
+                    Faber, um psicoterapeuta forense, decide tratá-la acreditando que pode
+                    descobrir o motivo do crime. Ao tentar quebrar o silêncio de Alicia, ele
+                    acaba envolvido em um mistério profundo e perigoso, que revela
+                    verdades inesperadas e um final totalmente surpreendente.
+                </p>
+                <p><strong>Número de páginas:</strong> 364 páginas</p>
+                <p><strong>Autor(a):</strong> Alex Michaelides</p>
+                <p><strong>Ano de publicação:</strong> 20 de maio de 2019</p>
+                <p><strong>Classificação Indicativa:</strong> 12 anos</p>
+            </div>
+
+        </div>
+        <div class="book-card">
+            <img src="assets/suspense/AEmpregada_capa.jpg" alt="Capa do livro A Empregada">
+            <div class="book-details">
+                <h3>A Empregada - Suspense Thriller</h3>
+                <p>
+                    Millie trabalha como empregada na casa de Nina e Andrew Winchester,
+                    cuidando da casa, da filha e de todas as tarefas diárias, enquanto vive num
+                    quarto minúsculo no sótão. Nina a trata cada vez pior, criando sujeiras de
+                    propósito e manipulando emocionalmente a família, enquanto Andrew
+                    parece cada vez mais fragilizado. Apesar disso, Millie tenta suportar tudo
+                    por causa de seu passado complicado. Porém, ao perceber o sofrimento
+                    de Andrew e imaginar a vida luxuosa de Nina, Millie começa a desejar algo
+                    mais — e os Winchesters logo descobrirão que não conhecem quem ela
+                    realmente é, nem do que ela é capaz
+                </p>
+                <p><strong>Número de páginas:</strong> 304 páginas</p>
+                <p><strong>Autor(a):</strong> Freida McFadden</p>
+                <p><strong>Ano de publicação:</strong> 13 de junho de 2023</p>
+                <p><strong>Classificação Indicativa:</strong> 14 anos</p>
+            </div>
         </div>
     </main>
-
-    <!-- ==================== RODAPÉ ==================== -->
-
-    <footer>
-        <div class="footer-content">
-            <p>
-                Gostou do nosso conteúdo? 
-                <a href="contato.html">Entre em contato</a> 
-                e compartilhe  sua paixão por livros!
-            </p>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Bora Ler? | Desenvolvidos por Alunos da Universidade de Vila Velha - UVV</p>
-        </div>
-    </footer>
+        <!-- ==================== RODAPÉ ==================== -->
+        <footer>
+            <div class="footer-content">
+                <p>
+                    Gostou do nosso conteúdo?
+                    <a href="contato.html">Entre em contato</a>
+                    e compartilhe sua paixão por livros!
+                </p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bora Ler? | Desenvolvidos por Alunos da Universidade de Vila Velha - UVV</p>
+            </div>
+        </footer>
 </body>
 </html>
