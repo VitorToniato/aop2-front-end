@@ -1,12 +1,3 @@
-body {
-    /* Faz o footer ficar no final da tela */
-    min-height: 100vh;              /* altura mínima da tela */
-    display: flex;                  /* ativa o flexbox */
-    flex-direction: column;         /* organiza os elementos em coluna (header, main, footer) */
-    margin: 0;                      /* remove margens padrão */
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #D9CDBD;      /* cor de fundo geral */
-}
 
 /* ==================== CABEÇALHO ==================== */
 
@@ -14,7 +5,7 @@ body {
     padding-top: 50px; 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #D9CDBD;
+    background-color: #cfc6baff;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -28,7 +19,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #D9CDBD;
+    background-color: #dbb69aff;
     padding-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -93,13 +84,15 @@ header a {
     position: fixed;                     /* Fixa sobre a tela */
     justify-content: center;
     align-items: center;
-    background-color: #DBC9BB;
+    background-color: #dbb69aff;
     top: 0;
     left: -100%;                         /* Começa fora da tela */
     width: 30%;
     height: 100%;
     transition: left 0.4s ease;          /* Animação suave de entrada */
     z-index: 1000;
+
+    border-right: 2px solid #8a6a56; 
 }
 
 /* Responsividade: ajusta largura em telas menores */
