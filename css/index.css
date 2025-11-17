@@ -9,10 +9,45 @@ body {
 }
 
 /* ==================== CABEÇALHO ==================== */
+
+body {
+    padding-top: 50px; 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #D9CDBD;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: #333;
+}
+
 header {
-    padding: 10px 20px;                  /* Espaçamento interno */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra abaixo do header */
-    position: relative;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #D9CDBD;
+    padding-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header a {
+    display: flex;
+    align-items: center; /* centraliza verticalmente */
+    text-decoration: none;
+    color: black;
+}
+
+.content-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #DBC9BB;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Título principal no topo */
