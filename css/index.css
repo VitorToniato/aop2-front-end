@@ -12,6 +12,7 @@ body {
 header {
     padding: 10px 20px;                  /* Espaçamento interno */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra abaixo do header */
+    position: relative;
 }
 
 /* Título principal no topo */
@@ -32,19 +33,22 @@ header {
 
 /* Ícone do menu (3 risquinhos) */
 .menu-botao {
-    display: block;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
     cursor: pointer;
 }
 
 /* Estilo dos risquinhos do menu */
 .menu-botao span {
-    display: block;
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 4px;
     background-color: black;
-    margin: 3px 4px;
+    display: block;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
 /* ==================== MENU LATERAL ==================== */
@@ -132,6 +136,7 @@ header {
 }
 
 /* ==================== CONTEÚDO PRINCIPAL ==================== */
+
 .home {
     flex: 1;
     width: 90%;
@@ -139,6 +144,68 @@ header {
     padding: 20px;
     background-color: #DBC9BB;
     text-align: center;
+}
+
+.home h1 {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.home p {
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #333;
+}
+
+/* ===== Cards =====*/
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.categories a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.categories div {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform  0.3s ease, box-shadow 0.3s ease;
+}
+
+.categories div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.categories p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #222;
+}
+
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .categories img {
+        width: 200px;
+    }
 }
 
 /* ==================== RODAPÉ ==================== */
@@ -216,10 +283,10 @@ header {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: backgroud-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 
-.contato-form button:houver {
+.contato-form button:hover {
     background-color: #555;
 }
