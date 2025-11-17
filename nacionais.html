@@ -1,36 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
-    <title>Bora Ler? - Nacionais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora ler? - Nacionais</title>
     <link rel="stylesheet" href="css/index.css">
     <script defer src="js/script.js"></script>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-top: 50px; 
+            
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #D9CDBD;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            color: #333;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #D9CDBD;
+            padding-top: 20px;
+        }
+
+        .content-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #DBC9BB;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #A5A5A5;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #CCC;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #000;
+        }
+
+        p,
+        li {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .book-card {
+            background-color: #FFFFFF;
+            border: 1px solid #C5BBAF;
+            border-radius: 5px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .book-card img {
+            max-width: 120px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .book-card strong {
+            color: #111;
+            display: inline-block;
+            min-width: 150px;
+        }
+
+        .book-details {
+            flex-grow: 1;
+        }
+
+        @media (max-width: 600px) {
+            .book-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .book-card img {
+                margin-bottom: 15px;
+            }
+
+            .book-card strong {
+                min-width: unset;
+                display: block;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <!-- Fundo escuro ao abrir o menu lateral -->
         <div id="overlay" class="hidden"></div>
 
         <div class="menu-container">
-            <!-- Ícone do menu hambúrguer -->
             <div class="menu-botao" id="botaoMenu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
-            <!-- Título centralizado -->
             <h1 class="title">Bora Ler?</h1>
 
-            <!-- Menu lateral de navegação -->
             <nav class="menu-links" id="menuLinks">
-
-                <!-- Botão de fechar o menu -->
                 <button id="closeMenu" class="close-btn">✖</button>
-
-                <!-- Links do menu -->
                 <a href="index.html" class="capa">Bora Ler?</a>
                 <a href="romance.html">Romance</a>
                 <a href="suspence.html">Suspense</a>
@@ -40,34 +149,127 @@
         </div>
     </header>
 
-     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main class="content-container">
+        <h1>Literatura Nacional</h1>
+        <p>
+            A literatura brasileira é vasta, rica e reflete a identidade cultural do nosso
+            povo. Abrangendo desde os clássicos até os contemporâneos, as obras
+            nacionais exploram nossa história, nossos problemas sociais e a diversidade
+            de nossas regiões, oferecendo narrativas potentes em todos os gêneros.
+        </p>
 
-    <main class="home">
-        <div>
-            <h1>Livros Nacionais</h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eum laudantium optio corporis aliquam animi veniam a vitae repellat, voluptatem nam quia dolorem earum placeat illum quibusdam! Esse, delectus debitis?
-            </p>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta totam minima incidunt a! Hic est quasi optio, magnam modi odit repudiandae commodi error similique inventore sunt facilis fuga, architecto quo!
-            </p>
+        <h2>Por que ler nacionais?</h2>
+        <ul>
+            <li>Identificação cultural e regional;</li>
+            <li>Valorização de autores locais;</li>
+            <li>Diversidade de vozes e realidades;</li>
+            <li>Qualidade literária reconhecida mundialmente.</li>
+        </ul>
+
+        <h2>Vejam abaixo algumas de nossas indicações literárias nesse gênero:</h2>
+
+        <div class="book-card">
+            <img src="assets/nacionais/ainda.png" alt="Capa do livro Ainda estou aqui">
+            <div class="book-details">
+                <h3>Ainda estou aqui - Nacional/Memórias e Biografia</h3>
+                <p>
+                    Eunice Paiva é uma mulher de muitas vidas. Casada com o deputado
+                    Rubens Paiva, esteve ao seu lado quando foi cassado e exilado, em
+                    1964. Mãe de cinco filhos, passou a criá-los sozinha quando, em 1971, o
+                    marido foi preso por agentes da ditadura, sendo torturado e morto. Em
+                    meio à dor, ela se reinventou. Voltou a estudar, tornou-se advogada,
+                    defensora dos direitos indígenas. Nunca chorou na frente das câmeras. Ao
+                    falar de Eunice, e de sua última luta, desta vez contra o Alzheimer,
+                    Marcelo Rubens Paiva fala também da memória, da infância e do filho. E
+                    mergulha num momento obscuro da história recente brasileira para contar ― e tentar entender ― o que de fato ocorreu com Rubens Paiva, seu pai, naquele
+                    janeiro de 1971.
+                </p>
+                <p><strong>Número de páginas:</strong> 296 páginas</p>
+                <p><strong>Autor(a):</strong> Marcelo Rubens Paiva</p>
+                <p><strong>Ano de publicação:</strong> 4 de agosto de 2015</p>
+                <p><strong>Classificação Indicativa:</strong> 14 anos</p>
+            </div>
         </div>
-    </main>
 
-    <!-- ==================== RODAPÉ ==================== -->
+        <div class="book-card">
+            <img src="assets/nacionais/enquanto.jpeg" alt="Capa do livro Enquanto eu não te encontro">
+            <div class="book-details">
+                <h3>Enquanto eu não te encontro - Nacional/GBTQIA+</h3>
+                <p>
+                    Lucas está vivendo uma fase feliz: passou no Enem, mudou-se para a
+                    capital com o melhor amigo e conquistou liberdade. Só no amor nada dá
+                    certo. Tudo muda quando ele conhece Pierre, um garoto francês
+                    encantador, durante a inauguração de uma balada. Em uma noite cheia de
+                    conversas, segredos e conexão instantânea, os dois vivem um encontro
+                    marcante — mas o destino pode não facilitar as coisas. Com humor,
+                    referências pop e muito charme nordestino, a história acompanha essa
+                    paixão inesperada e inesquecível.
+                </p>
+                <p><strong>Número de páginas:</strong> 272 páginas</p>
+                <p><strong>Autor(a):</strong> Pedro Rhuas</p>
+                <p><strong>Ano de publicação:</strong> 5 de julho de 2021</p>
+                <p><strong>Classificação Indicativa:</strong> 14 anos</p>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/nacionais/beijo.jpeg" alt="Capa do livro O Beijo da Neve">
+            <div class="book-details">
+                <h3>O Beijo da Neve - Nacional/Young Adult</h3>
+                <p>
+                    Nina tenta voltar à patinação enquanto trabalha para se manter. Sua
+                    chance aparece quando Elyan, um patinador olímpico que sumiu após
+                    uma tragédia, a convida para formar dupla. Ela aceita, embora tenha uma
+                    antiga decepção ligada a ele — e sentimentos que ressurgem. Entre
+                    treinos, viagens e emoções intensas, ambos enfrentam conflitos e
+                    descobrem que a paixão pelo esporte (e talvez um pelo outro) pode
+                    superar os desafios.
+                </p>
+                <p><strong>Número de páginas:</strong> 392 páginas</p>
+                <p><strong>Autor(a):</strong> Babi A. Sette</p>
+                <p><strong>Ano de publicação:</strong> 21 de agosto de 2023</p>
+                <p><strong>Classificação Indicativa:</strong> 18 anos</p>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/nacionais/jantar.jpeg" alt="Capa do livro Jantar Secreto">
+            <div class="book-details">
+                <h3>Jantar Secreto - Nacional/Suspense (Bônus)</h3>
+                <p>
+                    Um grupo de jovens deixa uma pequena cidade no Paraná para viver no
+                    Rio de Janeiro. Eles alugam um apartamento em Copacabana e fazem o
+                    possível para pagar a faculdade e manter vivos seus sonhos de sucesso
+                    na capital fluminense. Mas o dinheiro está curto e o aluguel está vencido.
+                    Para sair do buraco e manter o apartamento, os amigos adotam uma
+                    estratégia heterodoxa: arrecadar fundos por meio de jantares secretos,
+                    divulgados pela internet para uma clientela exclusiva da elite carioca.
+                    A partir daí, eles se envolvem em uma espiral de crimes, descobrem uma
+                    rede de contrabando de corpos, matadouros clandestinos e grã-finos
+                    excêntricos, e levam ao limite uma índole perversa que jamais
+                    imaginaram existir em cada um deles.
+                </p>
+                <p><strong>Número de páginas:</strong> 368 páginas</p>
+                <p><strong>Autor(a):</strong> Raphael Montes</p>
+                <p><strong>Ano de publicação:</strong> 14 de novembro de 2016</p>
+                <p><strong>Classificação Indicativa:</strong> 18 anos</p>
+            </div>
+        </div>
+
+    </main>
 
     <footer>
         <div class="footer-content">
             <p>
-                Gostou do nosso conteúdo? 
-                <a href="contato.html">Entre em contato</a> 
+                Gostou do nosso conteúdo?
+                <a href="contato.html">Entre em contato</a>
                 e compartilhe sua paixão por livros!
             </p>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2025 Bora Ler? | Desenvolvidos por Alunos da Universidade de Vila Velha - UVV</p>
         </div>
     </footer>
 </body>
+
 </html>

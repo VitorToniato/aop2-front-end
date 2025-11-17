@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Gênero Romance</title>
-    
+    <title>Bora ler? - Romance</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/script.js"></script>
+
     <style>
-        /* CSS Básico (Inspirado no index.css) */
         * {
-            box-sizing: border-box; /* Garante que padding não afete a largura final */
+            box-sizing: border-box;
         }
 
         body {
-            margin: 0; /* remove margens padrão */
+            padding-top: 50px; 
+            
+            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #D9CDBD; /* cor de fundo geral (do seu CSS) */
-            padding: 20px; /* Espaçamento para o conteúdo não colar nas bordas */
+            background-color: #D9CDBD;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
             color: #333;
         }
 
-        /* Contêiner Principal (Baseado no .home) */
-        .content-container {
-            width: 90%;
-            max-width: 900px; /* Limita a largura para melhor leitura */
-            margin: 20px auto; /* Centraliza (baseado no .home) */
-            padding: 30px;
-            background-color: #DBC9BB; /* Cor do .home */
-            border-radius: 8px; /* Borda suave */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra (do seu header) */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #D9CDBD;
+            padding-top: 20px;
         }
 
-        /* Títulos */
+        .content-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #DBC9BB;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         h1 {
             text-align: center;
             border-bottom: 2px solid #A5A5A5;
@@ -47,14 +61,14 @@
             color: #000;
         }
 
-        /* Parágrafos e Listas */
-        p, li {
-            line-height: 1.6; /* Melhora a legibilidade */
+        p,
+        li {
+            line-height: 1.6;
             font-size: 16px;
         }
 
         ul {
-            list-style-position: inside; /* Mantém os marcadores dentro do bloco */
+            list-style-position: inside;
             padding-left: 0;
         }
 
@@ -62,38 +76,34 @@
             margin-bottom: 8px;
         }
 
-        /* Cartão de Indicação de Livro */
         .book-card {
-            background-color: #FFFFFF; /* Fundo branco para destacar */
+            background-color: #FFFFFF;
             border: 1px solid #C5BBAF;
             border-radius: 5px;
             padding: 25px;
             margin-top: 25px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            display: flex; /* Usar flexbox para alinhar imagem e texto */
-            gap: 20px; /* Espaço entre a imagem e o texto */
-            align-items: flex-start; /* Alinha o conteúdo ao topo */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
         }
 
-        /* Estilo para a imagem do livro */
         .book-card img {
-            max-width: 120px; /* Largura máxima da imagem */
-            height: auto; /* Mantém a proporção */
-            border-radius: 4px; /* Bordas suaves para a imagem */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            flex-shrink: 0; /* Impede que a imagem encolha */
+            max-width: 120px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
         }
 
-        /* Destaca os detalhes (Autor, Páginas) */
         .book-card strong {
             color: #111;
             display: inline-block;
-            min-width: 150px; /* Alinha os detalhes */
+            min-width: 150px;
         }
 
-        /* Conteúdo do texto dentro do card */
         .book-details {
-            flex-grow: 1; /* Permite que os detalhes do livro ocupem o espaço restante */
+            flex-grow: 1;
         }
 
         @media (max-width: 600px) {
@@ -109,15 +119,39 @@
 
             .book-card strong {
                 min-width: unset;
-                display: block; /* quebra linha */
+                display: block;
             }
         }
     </style>
 </head>
-<body>
 
+<body>
+    <header>
+        <div id="overlay" class="hidden"></div>
+
+        <div class="menu-container">
+            <div class="menu-botao" id="botaoMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <h1 class="title">Bora Ler?</h1>
+
+            <nav class="menu-links" id="menuLinks">
+
+                <button id="closeMenu" class="close-btn">✖</button>
+
+                <a href="index.html" class="capa">Bora Ler?</a>
+                <a href="romance.html">Romance</a>
+                <a href="suspence.html">Suspense</a>
+                <a href="nacionais.html">Nacionais</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
     <main class="content-container">
-        <h1>O que é o romance?</h1>
+        <h1>Livros de Romance</h1>
         <p>
             O romance é um gênero literário de ficção caracterizado por ser uma narrativa
             longa em prosa, focada no desenvolvimento de personagens complexos e um
@@ -134,6 +168,7 @@
             <li>linguagem de acordo com a proposta do ambiente narrado;</li>
             <li>história fictícia ou mesclando ficção e realidade.</li>
         </ul>
+        
         <p>
             Os tipos de romance variam por temas e estilos, e incluem o romance romântico,
             histórico, realista, naturalista, policial, de aventura, de ficção científica e de
@@ -143,7 +178,7 @@
         <h2>Vejam abaixo algumas de nossas indicações literárias nesse gênero:</h2>
 
         <div class="book-card">
-            <img src="../assets/romance/romance_vergonha.jpg" alt="Capa do livro Vergonha">
+            <img src="assets/romance/vergonha.jpg" alt="Capa do livro Vergonha">
             <div class="book-details">
                 <h3>Vergonha - Romance Romântico</h3>
                 <p>
@@ -165,7 +200,7 @@
         </div>
 
         <div class="book-card">
-            <img src="../assets/romance/romance_quarta.jpg" alt="Capa do livro Quarta Asa">
+            <img src="assets/romance/quarta.jpg" alt="Capa do livro Quarta Asa">
             <div class="book-details">
                 <h3>Quarta Asa - Romance de Fantasia</h3>
                 <p>
@@ -186,7 +221,7 @@
         </div>
 
         <div class="book-card">
-            <img src="../assets/romance/romance_osMiseraveis.jpeg" alt="Capa do livro Os Miseráveis">
+            <img src="../aop2-front-end/assets/romance/miseraveis.jpeg" alt="Capa do livro Os Miseráveis">
             <div class="book-details">
                 <h3>Os Miseráveis - Romance Histórico</h3>
                 <p>
@@ -205,20 +240,15 @@
                 <p><strong>Classificação Indicativa:</strong> 16 anos</p>
             </div>
         </div>
-
     </main>
-
-    <!-- ==================== RODAPÉ ==================== -->
-
     <footer>
         <div class="footer-content">
             <p>
-                Gostou do nosso conteúdo? 
-                <a href="contato.html">Entre em contato</a> 
+                Gostou do nosso conteúdo?
+                <a href="contato.html">Entre em contato</a>
                 e compartilhe sua paixão por livros!
             </p>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2025 Bora Ler? | Desenvolvidos por Alunos da Universidade de Vila Velha - UVV</p>
         </div>
