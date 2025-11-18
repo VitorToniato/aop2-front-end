@@ -1,4 +1,3 @@
-
 /* ==================== CABEÇALHO ==================== */
 
 body {
@@ -26,7 +25,7 @@ header {
 
 header a {
     display: flex;
-    align-items: center; /* centraliza verticalmente */
+    align-items: center; 
     text-decoration: none;
     color: black;
 }
@@ -41,23 +40,20 @@ header a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Título principal no topo */
 .title {
-    position: absolute;                  /* Centralizado de forma fixa */
+    position: absolute;                 
     left: 50%;
     transform: translateX(-50%);
     font-size: 25px;
     margin: 0;
 }
 
-/* Container que segura o menu e o título */
 .menu-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Ícone do menu (3 risquinhos) */
 .menu-botao {
     display: flex;
     flex-direction: column;
@@ -67,7 +63,6 @@ header a {
     cursor: pointer;
 }
 
-/* Estilo dos risquinhos do menu */
 .menu-botao span {
     width: 30px;
     height: 4px;
@@ -81,21 +76,20 @@ header a {
 .menu-links {
     display: flex;
     flex-direction: column;
-    position: fixed;                     /* Fixa sobre a tela */
+    position: fixed;                
     justify-content: center;
     align-items: center;
     background-color: #dbb69aff;
     top: 0;
-    left: -100%;                         /* Começa fora da tela */
+    left: -100%;                         
     width: 30%;
     height: 100%;
-    transition: left 0.4s ease;          /* Animação suave de entrada */
+    transition: left 0.4s ease;         
     z-index: 1000;
 
     border-right: 2px solid #8a6a56; 
 }
 
-/* Responsividade: ajusta largura em telas menores */
 @media (max-width: 768px) {
     .menu-links {
         width: 60%;
@@ -108,7 +102,6 @@ header a {
     }
 }
 
-/* Links dentro do menu */
 .menu-links a:not(.capa) {
     text-decoration: none;
     color: #333;
@@ -124,7 +117,6 @@ header a {
     border-radius: 5px;
 }
 
-/* Link "Bora Ler?" da capa */
 .capa {
     position: absolute;
     font-size: 30px;
@@ -139,7 +131,6 @@ header a {
     transform: translate(-50%, -50%);
 }
 
-/* Botão para fechar o menu lateral */
 .close-btn {
     display: flex;
     position: absolute;
@@ -152,12 +143,10 @@ header a {
     font-weight: bold;
 }
 
-/* Quando o menu é ativado (classe adicionada via JS) */
 .menu-ativo {
-    left: 0; /* Mostra o menu */
+    left: 0;
 }
 
-/* Efeito hover nos links do menu */
 .menu-links a:not(.capa):hover {
     transform: translateY(-4px);
     background-color: #E5E3D6;
@@ -318,3 +307,106 @@ header a {
 .contato-form button:hover {
     background-color: #555;
 }
+
+
+        /* CSS Básico - Paginas de Conteudo*/
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Títulos */
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #A5A5A5;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #CCC;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #000;
+        }
+
+        /* Parágrafos e Listas */
+        p,
+        li {
+            line-height: 1.6;
+            /* Melhora a legibilidade */
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-position: inside;
+            /* Mantém os marcadores dentro do bloco */
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Cartão de Indicação de Livro */
+        .book-card {
+            background-color: #FFFFFF;
+            /* Fundo branco para destacar */
+            border: 1px solid #C5BBAF;
+            border-radius: 5px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            /* Usar flexbox para alinhar imagem e texto */
+            gap: 20px;
+            /* Espaço entre a imagem e o texto */
+            align-items: flex-start;
+            /* Alinha o conteúdo ao topo */
+        }
+
+        /* Estilo para a imagem do livro */
+        .book-card img {
+            max-width: 120px;
+            /* Largura máxima da imagem */
+            height: auto;
+            /* Mantém a proporção */
+            border-radius: 4px;
+            /* Bordas suaves para a imagem */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+            /* Impede que a imagem encolha */
+        }
+
+        /* Destaca os detalhes (Autor, Páginas) */
+        .book-card strong {
+            color: #111;
+            display: inline-block;
+            min-width: 150px;
+            /* Alinha os detalhes */
+        }
+
+        /* Conteúdo do texto dentro do card */
+        .book-details {
+            flex-grow: 1;
+            /* Permite que os detalhes do livro ocupem o espaço restante */
+        }
+
+        @media (max-width: 600px) {
+            .book-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .book-card img {
+                margin-bottom: 15px;
+            }
+
+            .book-card strong {
+                min-width: unset;
+                display: block;
+                /* quebra linha */
+            }
+        }
